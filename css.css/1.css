@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+
+
+header {
+    
+    display:flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    flex-wrap: wrap-reverse;
+    background-color: red;
+   
+    
+    
+}
+
+p{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Letter Gothic Std', sans-serif;
+    padding-bottom: 20px; 
+    padding-top:10px;    
+   
+}
+
+
+header ul{
+    
+    display:flex;
+    list-style-type: none;
+    
+}
+
+header a{
+    font-size: 20px;
+    
+    text-decoration: none;
+    padding: 20px;
+    
+	font-family: 'Letter Gothic Std', sans-serif;
+                                                
+    
+}
+
+h1 {font-size: 40px;
+    
+	font-family: 'Rubik Mono One', monospace;
+    
+    text-align: center;
+	width: 100%;
+                                                
+}
+h2 {
+    font-size: 40px;
+    
+	font-family: 'Rubik Mono One', monospace;
+    
+    text-align: center;
+	position:relative;
+    display:flex;
+
+                                                
+
+}
+
+
+section {
+    margin: 20px;
+    position:relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+        }
+
+
+        .interview1,
+        .interview2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .interview1,
+        .interview2 {
+            width: 45%;
+            background-color: white;
+            padding: 15px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+/* Mobile */
+@media screen and (max-width:767px){
+    main section{flex-direction: column;}
+   
+    
+    #banner video{top:0}
+    
+    
+}
+
+
+
+/*Tablet*/
+
+@media screen and (min-width:768px) {
+    
+    header{
+        
+        flex-direction: column-reverse;
+        
+        
+        
+
+    }
+    #banner video{top:0}
+}
+    
+/*Desktop*/
+
+@media screen and (min-width:1280px) {
+    
+    header{
+        
+        margin:0 auto;
+        flex-direction: row;
+        
+    }
+    .col3{
+    flex: 3;
+}
+    
+    .col2{
+    flex: 1;
+    
+}
+
+
+    
+    
+    
+}
+        

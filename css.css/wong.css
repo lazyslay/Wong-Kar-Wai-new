@@ -1,0 +1,291 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-size:100%;
+    box-sizing: border-box;
+} 
+
+html {
+    background-color:orangered;
+}
+
+#centered{
+	
+	justify-content: center;
+	padding: 0;
+	text-align: center;
+	height:100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	
+	
+	
+	
+}
+
+#centered2 {
+	display:flex;
+	padding-top: 150px;
+}
+h1 {font-size: 40px;
+    
+	font-family: 'Rubik Mono One', monospace;
+	
+                                                
+}
+h3{
+	font-size: 15px;
+    
+	font-family: 'Rubik Mono One', monospace;
+	text-shadow:1px 1px 4px white;
+	color: black;
+	
+}
+header {
+    
+    display:flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    flex-wrap: wrap-reverse;
+    background-color: red;
+    height: 100px;
+   
+    
+    
+}
+
+
+
+
+header ul{
+    
+    display:flex;
+    list-style-type: none;
+    
+}
+
+header a{
+    font-size: 20px;
+    
+    text-decoration: none;
+    padding: 20px;
+    
+	font-family: 'Letter Gothic Std', sans-serif;
+                                                
+    
+}
+
+
+
+.back {
+    font-family: 'Letter Gothic Std', sans-serif;
+   font-size: 20px;
+}
+
+
+main { background-position:center;
+    display:flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-items:flex-start;
+    background-image: url("../img/wig.jpeg");
+    height:80vh;
+    background-size: cover;
+    
+}
+
+.inner {
+    position: relative;
+    width:100%;
+    height:100%;
+    text-align: center;
+    transition: transform 1.8s;
+    transform-style: preserve-3d;
+}
+
+    
+    
+.front,.back {
+    position: absolute;
+    width:100%;
+    height:100%;
+    padding: 10px;
+    backface-visibility: hidden;
+}
+.back {
+    
+    background-color: red;
+    color: white;
+    transform: rotateY(180deg);
+    
+
+}
+
+.stamp:hover ,.flip{
+    transform: rotateY(180deg);
+}
+
+
+header+section{
+    min-height: 400px;
+    
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+h2{
+    font-size: 20px;
+    
+	font-family: 'Letter Gothic Std', sans-serif;
+                                                
+}
+
+
+
+  body{
+            overflow:visible;
+	  
+            ;
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  width: 100%;
+	  
+        }
+
+
+
+
+
+    .stamp{
+        z-index: 9999;
+        position:absolute;
+        animation-name:stamp;
+        animation-duration:3s;
+        /*animation-delay: 1s;*/
+        animation-timing-function: ease;
+        animation-iteration-count:1;
+        animation-direction:reverse;
+		animation-delay: .5s;
+        margin: auto;
+        width:300px;
+    height:300px;
+    background-color: transparent;
+    perspective: 1000px;
+    margin: 10px;
+		overflow:visible;
+    
+        }
+        
+         
+        @keyframes stamp {
+            
+            0% {transform:scale(0); transform:rotate(45deg)}
+            50% {border-radius: 150px}
+            78% {transform:translate(1440px,300px)}
+            100% {transform:scale(1); transform:rortate(180deg)}
+            
+        }
+
+
+
+ #home {
+	width:100%;
+	height:100%;
+	overflow:visible;
+    position: relative;
+    
+}
+
+#home img{
+	
+	min-width: 100%;
+     min-height: 100%;
+	position:relative;
+    }
+
+ footer {
+            background-color: orangered;
+            color: black;
+            text-align: center;
+            padding: 1em;
+            
+            bottom: 0;
+            width: 100%;
+			font-family: 'Letter Gothic Std', sans-serif;
+     height: 100px;
+        }
+
+
+/* Mobile */
+@media screen and (max-width:767px){
+    main section{flex-direction: column;}
+   
+    main {
+        background-position: center;
+         
+    }
+    #banner video{top:0}
+    .stamp {display: none}
+    
+}
+
+
+
+/*Tablet*/
+
+@media screen and (min-width:768px) {
+    
+    header{
+        
+        flex-direction: column-reverse;
+        
+        
+        
+
+    }
+    #banner video{top:0}
+}
+    
+/*Desktop*/
+
+@media screen and (min-width:1880px) {
+    
+    header{
+        
+        margin:0 auto;
+        flex-direction: row;
+        
+    }
+    
+    main{background-image:none;}
+    
+    .stamp {display: none}
+    .col3{
+    flex: 3;
+}
+    
+    .col2{
+    flex: 1;
+    
+}
+
+
+    
+    
+    
+}
+
+       
+        
+       
+        
